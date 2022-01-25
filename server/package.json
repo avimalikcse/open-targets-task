@@ -1,0 +1,31 @@
+{
+    "name": "ot-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+        "@graphql-tools/graphql-file-loader": "^7.3.3",
+        "@graphql-tools/load": "^7.5.1",
+        "@graphql-tools/schema": "^8.3.1",
+        "express": "^4.17.2",
+        "express-graphql": "^0.12.0",
+        "graphql": "^16.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.8",
+        "@babel/core": "^7.16.10",
+        "@babel/node": "^7.16.8",
+        "@babel/preset-env": "^7.16.11",
+        "chai": "^4.3.4",
+        "mocha": "^9.1.4",
+        "nodemon": "^2.0.15",
+        "supertest": "^6.2.2"
+    },
+    "scripts": {
+        "build": "babel index.js -d dist",
+        "start": "nodemon --exec babel-node app.js",
+        "test": "mocha --require @babel/register --watch tests/*.test.js"
+    },
+    "author": "",
+    "license": "ISC"
+}
